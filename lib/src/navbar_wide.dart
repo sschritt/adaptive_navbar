@@ -21,7 +21,7 @@ class NavBarWide extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       color: Colors.transparent,
-      width: sw / 3,
+      width: sw / 2,
       child: Align(
         alignment: Alignment.centerRight,
         child: Row(
