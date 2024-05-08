@@ -46,7 +46,6 @@ class AdaptiveNavBar extends AppBar {
     required this.screenWidth,
     required this.navBarItems,
     Key? key,
-    Widget? title,
     Widget? leading,
     bool automaticallyImplyLeading = true,
     Widget? flexibleSpace,
@@ -71,29 +70,6 @@ class AdaptiveNavBar extends AppBar {
     SystemUiOverlayStyle? systemOverlayStyle,
   }) : super(
           key: key,
-          title: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: canTitleGetTapped
-                ? InkWell(
-                    onTap: onTitleTapped,
-                    child: title ??
-                        const Text(
-                          "MB NavBar",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24,
-                          ),
-                        ),
-                  )
-                : title ??
-                    const Text(
-                      "MB NavBar",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24,
-                      ),
-                    ),
-          ),
           actions: [
             screenWidth! < 800.toDouble()
                 ? NavBarSmall(
