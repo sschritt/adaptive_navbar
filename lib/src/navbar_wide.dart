@@ -23,7 +23,7 @@ class NavBarWide extends StatelessWidget {
       color: Colors.transparent,
       width: sw,
       child: Align(
-        alignment: Alignment.centerRight,
+        alignment: Alignment.center,
         child: Row(
           children: List.generate(
             navBarItems.length,
